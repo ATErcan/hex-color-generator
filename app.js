@@ -11,7 +11,7 @@ const getRandomColor = () => {
   for (let i = 0; i < 6; i++) {
     color += hexItems[Math.floor(Math.random() * hexItems.length)];
   }
-  colorText.innerText = color;
+  colorText.textContent = color;
   backgroundOutput.style.backgroundColor = color;
 
   return color;
@@ -25,23 +25,15 @@ const addToList = () => {
   const listColor = document.createElement("p");
   listColor.classList.add("list-color");
   listItem.appendChild(listColor);
-  listColor.innerText = getRandomColor();
-  listItem.style.backgroundColor = getRandomColor();
+  listColor.innerText = colorText.textContent;
+  listItem.style.backgroundColor = colorText.textContent;
+  colorArray.push(listColor.textContent);
+  console.log(listColor.textContent);
+  localStorage.setItem("colors", colorArray);
 };
 
 generateButton.addEventListener("click", (e) => {
   e.preventDefault();
+  getRandomColor();
   addToList();
 });
-
-/* colorText.addEventListener("click", () => {
-  document.execCommand("copy");
-});
-
-colorText.addEventListener("copy", (e) => {
-  e.preventDefault();
-  if (e.clipboardData) {
-    e.clipboardData.setData("text/plain", colorText.textContent);
-  }
-});
- */
