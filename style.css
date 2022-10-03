@@ -51,11 +51,22 @@ main .color-container .generate-color .btn {
 }
 main .generated-colors {
   width: 30%;
+  overflow: auto;
 }
 main .generated-colors h2 {
   background-color: #212529;
   padding: 1rem;
-  margin-bottom: 1rem;
+}
+main .generated-colors .color-list {
+  list-style-type: none;
+}
+.li {
+  padding: 0.5rem 0.5rem;
+}
+.list-color {
+  width: max-content;
+  background-color: #212529;
+  border: 1px solid #000;
 }
 
 footer {
