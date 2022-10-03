@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+main {
+  display: flex;
+  height: calc(100vh - 219px);
+  color: #fff;
+}
+main .color-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .color-container .color-title {
+  border: 3px solid #000;
+  border-radius: 20px;
+  width: 30%;
+  text-align: center;
+  background-color: #212529;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+main .color-container .color-title h2 {
+  font-size: 2.6rem;
+}
+main .color-container .color-title h4 {
+  font-size: 2.2rem;
+}
+main .color-container .generate-color .btn {
+  display: inline-block;
+  border: 3px solid #000;
+  border-radius: 20px;
+  min-width: 180px;
+  min-height: 40px;
+  padding: 0.5rem;
+  background-color: #212529;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+main .generated-colors {
+  width: 30%;
+}
+main .generated-colors h2 {
+  background-color: #212529;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #212529;
+  color: #fff;
+}
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  animation: click 0.5s linear 1;
+}
+@keyframes click {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
