@@ -27,9 +27,6 @@ const addToList = () => {
   listItem.appendChild(listColor);
   listColor.innerText = colorText.textContent;
   listItem.style.backgroundColor = colorText.textContent;
-  colorArray.push(listColor.textContent);
-  console.log(listColor.textContent);
-  localStorage.setItem("colors", colorArray);
 };
 
 generateButton.addEventListener("click", (e) => {
