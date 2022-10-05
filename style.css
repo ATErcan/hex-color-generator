@@ -43,6 +43,7 @@ main .color-container .generate-color .btn {
   display: inline-block;
   border: 3px solid #000;
   border-radius: 20px;
+  user-select: none;
   min-width: 180px;
   min-height: 40px;
   padding: 0.5rem;
